@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W64X5Z86S9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-W64X5Z86S9');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo_inicio.css">
+    <title>Inicio</title>
+</head>
+
+<body>
+    <header class="pageHeader">
+        <h2>la radio de la fé <br /><br />la 96.1<h2>
+    </header>
+    <img src="../imagenes_pag/Picsart_24-12-21_11-30-59-353.png" width="150px" alt="logo de FM del milagro"
+        title="FM del milagro" />
+    <p><span>toca play para escucharnos</span></p>
+    
+    <!-- Reproductor Visible -->
+    <script type="text/javascript" src="https://hosted.muses.org/mrp.js"></script>
+    <script type="text/javascript">
+        MRP.insert({
+            'url': 'https://emisora.radiosplay.com.ar/8112/stream',
+            'lang': 'es',
+            'volume': 100,
+            'autoplay': false,
+            'forceHTML5': true,
+            'jsevents': true,
+            'buffering': 0,
+            'title': 'FM DEL MILAGRO',
+            'welcome': 'Bienvenidos',
+            'wmode': 'transparent',
+            'skin': 'alberto',
+            'width': 250,
+            'height': 95
+        });
+    </script>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var hiddenRadio = document.getElementById("hidden-radio");
+            var visibleRadio = document.querySelector("iframe");
+            
+            if (hiddenRadio.paused) {
+                hiddenRadio.play();
+            }
+        });
+    </script>
+</body>
+
+</html>
